@@ -5,6 +5,8 @@
 //  Created by Jolomi Mebaghanje on 4/15/25.
 //
 
+// I use this file to check if our recipe API and error cases work right
+
 import XCTest
 @testable import FetchRecipeApp
 
@@ -24,7 +26,7 @@ final class RecipeServiceTests: XCTestCase {
             _ = try JSONDecoder().decode([String: [Recipe]].self, from: data)
             XCTFail("Expected decoding to fail with malformed data")
         } catch {
-            // Expected
+            // this is expected so test passes
         }
     }
 

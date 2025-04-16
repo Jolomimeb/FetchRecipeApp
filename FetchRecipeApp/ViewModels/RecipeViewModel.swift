@@ -4,17 +4,19 @@
 //
 //  Created by Jolomi Mebaghanje on 4/15/25.
 //
+// I use file to handle all the logic for loading, saving, filtering recipes
 
 import Foundation
 
 @MainActor
 final class RecipeViewModel: ObservableObject {
-    @Published var recipes: [Recipe] = []
-    @Published var savedRecipes: Set<Recipe> = []
-    @Published var errorMessage: String?
-    @Published var isLoading = false
-    @Published var searchQuery: String = ""
+    @Published var recipes: [Recipe] = [] // all recipes from API
+    @Published var savedRecipes: Set<Recipe> = [] // recipes user liked
+    @Published var errorMessage: String? // error to show in UI
+    @Published var isLoading = false // loading state for spinner
+    @Published var searchQuery: String = "" // text typed into search
 
+    // this filters recipes by search query
     var filteredRecipes: [Recipe] {
         if searchQuery.isEmpty { return recipes }
         return recipes.filter {
@@ -23,6 +25,7 @@ final class RecipeViewModel: ObservableObject {
         }
     }
 
+    // toggles saved or unsaved state for a recipe
     func toggleSaved(_ recipe: Recipe) {
         if savedRecipes.contains(recipe) {
             savedRecipes.remove(recipe)
@@ -31,10 +34,12 @@ final class RecipeViewModel: ObservableObject {
         }
     }
 
+    // checks if a recipe is already saved
     func isSaved(_ recipe: Recipe) -> Bool {
         return savedRecipes.contains(recipe)
     }
 
+    // calls the RecipeService to get recipes and update state
     func loadRecipes() async {
         isLoading = true
         defer { isLoading = false }

@@ -5,6 +5,8 @@
 //  Created by Jolomi Mebaghanje on 4/16/25.
 //
 
+// This is the file that shows a list of recipes that user has saved
+
 import SwiftUI
 
 struct SavedRecipesView: View {

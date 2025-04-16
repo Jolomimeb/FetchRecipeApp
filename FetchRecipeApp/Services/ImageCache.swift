@@ -9,7 +9,7 @@
 import UIKit
 
 final class ImageCache {
-    static let shared = ImageCache() // singleton we use anywhere
+    static let shared = ImageCache() // singleton
     private var memoryCache = NSCache<NSString, UIImage>() // stores images in memory
 
     func image(for url: URL) async -> UIImage? {

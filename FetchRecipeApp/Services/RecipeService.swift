@@ -10,7 +10,7 @@
 import Foundation
 
 final class RecipeService {
-    static let shared = RecipeService() // singleton
+    static let shared = RecipeService() // singleton global access
     private let endpoint = URL(string: "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json")!
 
     // this gets all the recipes from the API

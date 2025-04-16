@@ -29,9 +29,32 @@
 		F2A2E7D72DAF12AE00BF7F07 /* FetchRecipeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchRecipeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F2A2E8112DAF2EF100BF7F07 /* Exceptions for "FetchRecipeApp" folder in "FetchRecipeApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/ImageCacheTests.swift,
+				Tests/RecipeServiceTests.swift,
+			);
+			target = F2A2E7BC2DAF12AB00BF7F07 /* FetchRecipeApp */;
+		};
+		F2A2E8132DAF2F0200BF7F07 /* Exceptions for "FetchRecipeApp" folder in "FetchRecipeAppTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Tests/ImageCacheTests.swift,
+				Tests/RecipeServiceTests.swift,
+			);
+			target = F2A2E7CC2DAF12AE00BF7F07 /* FetchRecipeAppTests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F2A2E7BF2DAF12AB00BF7F07 /* FetchRecipeApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F2A2E8112DAF2EF100BF7F07 /* Exceptions for "FetchRecipeApp" folder in "FetchRecipeApp" target */,
+				F2A2E8132DAF2F0200BF7F07 /* Exceptions for "FetchRecipeApp" folder in "FetchRecipeAppTests" target */,
+			);
 			path = FetchRecipeApp;
 			sourceTree = "<group>";
 		};

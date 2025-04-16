@@ -11,6 +11,7 @@ import SwiftUI
 struct FetchRecipeAppApp: App {
     var body: some Scene {
         WindowGroup {
+            // call the content view
             ContentView()
         }
     }

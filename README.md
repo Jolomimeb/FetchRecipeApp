@@ -118,7 +118,5 @@ With more time, I would persist this using `AppStorage` or `UserDefaults`.
 
 ---
 
-## 🏁 Submit
-
 Thank you for the opportunity to build this!
 

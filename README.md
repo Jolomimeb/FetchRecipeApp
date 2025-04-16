@@ -7,8 +7,6 @@ This app displays recipes from the remote API, with search, save (favorites), an
 
 ## 📸 Screenshots
 
-## 📸 Screenshots
-
 | Main List | Saved Recipes | Dark Mode |
 |-----------|----------------|-----------|
 | ![All Recipes](Screenshots/all_recipes.png) | ![Favorites](Screenshots/favorites.png) | ![Dark Mode](Screenshots/darkMode1.png) |
